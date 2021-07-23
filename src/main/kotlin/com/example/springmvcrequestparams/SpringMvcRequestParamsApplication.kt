@@ -39,8 +39,7 @@ class PageableResource {
     ) = Pageable(page, size, sortBy, sortOrder)
 
     @GetMapping("/api/query-map")
-    fun requestParams(@RequestParam query: Map<String, String>) =
-        query.toPageable()
+    fun requestParams(@RequestParam query: Map<String, String>) = query.toPageable()
 
     @GetMapping("/api/pojo")
     fun requestParams(pageable: Pageable) = pageable
