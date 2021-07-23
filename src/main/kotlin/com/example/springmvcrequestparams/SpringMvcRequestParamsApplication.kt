@@ -30,7 +30,7 @@ fun Map<String, String>.toPageable(): Pageable = let {
 @RestController
 class PageableResource {
 
-    @GetMapping("/api/request-param")
+    @GetMapping("/api/request-params")
     fun requestParams(
         @RequestParam(name = "page", defaultValue = "1") page: Int,
         @RequestParam(name = "size", defaultValue = "25") size: Int,
