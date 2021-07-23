@@ -21,7 +21,7 @@ class SpringMvcRequestParamsApplicationTests(@Autowired val restTemplate: TestRe
     @Test
     fun `should get with request params`() {
         // when
-        val response = restTemplate.getForEntity<Pageable>("/api/request-param?page={page}&size={size}", 2, 10)
+        val response = restTemplate.getForEntity<Pageable>("/api/request-params?page={page}&size={size}", 2, 10)
 
         // then
         assertThat(response.statusCode).isEqualTo(HttpStatus.OK)
